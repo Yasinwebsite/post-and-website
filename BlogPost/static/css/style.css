@@ -1,0 +1,80 @@
+.post-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.post-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.post-description {
+  font-size: 1em;
+  color: #555;
+}
+.like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: transform 0.2s;
+}
+.like-button:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+.post-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+.post-title {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #333;
+}
+.post-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.post-description {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+.like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: transform 0.2s;
+}
+.like-button:hover {
+  transform: scale(1.2);
+  color: red;
+}
+.comments {
+  margin-top: 20px;
+}
+.comment {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}

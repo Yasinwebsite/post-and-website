@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+{% for post in posts %}
+<div class="post-card">
+  <h2 class="post-title">{{ post.title }}</h2>
+  <p class="post-description">{{ post.desc }}</p>
+  <button class="like-button">❤️ <span class="like-count">{{ post.likes }}</span></button>
+  <div class="comments">
+    <h3>کامنت‌ها</h3>
+    <div class="comment">
+      <strong>کاربر ۱:</strong> خیلی عالی بود 👌
+    </div>
+    <div class="comment">
+      <strong>کاربر ۲:</strong> طراحی خیلی خفن شده 😍
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+</body>
+</html>

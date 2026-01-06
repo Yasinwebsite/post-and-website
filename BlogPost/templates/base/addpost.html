@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="post-card">
+        <input name="title" type="text" class="post-title" placeholder="نام توضیحات" required>
+        <textarea  name="des" id="" cols="38" rows="10" placeholder="توضیحات" required></textarea><br>
+        <input type="number" name="like" id="" value="❤" required>
+        <br>
+        <br>
+        <input type="submit" value="تایید">
+    </div>
+</form>
+</body>
+</html>
