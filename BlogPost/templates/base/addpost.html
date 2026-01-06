@@ -3,20 +3,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>افزودن پست جدید | وبلاگ خفن</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-<form action="" method="post">
-    {% csrf_token %}
-    <div class="post-card">
-        <input name="title" type="text" class="post-title" placeholder="نام توضیحات" required>
-        <textarea  name="des" id="" cols="38" rows="10" placeholder="توضیحات" required></textarea><br>
-        <input type="number" name="like" id="" value="❤" required>
-        <br>
-        <br>
-        <input type="submit" value="تایید">
-    </div>
-</form>
+<div class="page-wrapper">
+  <header class="site-header">
+    <h1 class="site-title">وبلاگ خفن</h1>
+    <p class="site-subtitle">یه جای خفن برای نوشتن فکرها و داستان‌هات ✍️</p>
+  </header>
+
+  <main class="form-container">
+    <section class="form-card glass-card">
+      <h2 class="form-title">افزودن پست جدید</h2>
+      <p class="form-description">عنوان، توضیحات و تعداد لایک اولیه پستت رو تنظیم کن.</p>
+
+      <form action="" method="post" class="post-form">
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="title">عنوان پست</label>
+          <input id="title" name="title" type="text" class="input-text" placeholder="مثلاً: چرا برنامه‌نویسی خفنه؟" required>
+        </div>
+
+        <div class="form-group">
+          <label for="des">توضیحات</label>
+          <textarea id="des" name="des" class="input-textarea" rows="7" placeholder="اینجا هرچی دوست داری بنویس..." required></textarea>
+        </div>
+
+        <div class="form-group like-group">
+          <label>تعداد لایک اولیه</label>
+          <div class="like-counter-wrapper">
+            <button id="incrementButton" class="like-btn" type="button">❤️</button>
+            <span id="counterDisplay" class="counter-display">0</span>
+          </div>
+          <!-- این input مخفی مقدار واقعی لایک را به بک‌اند می‌فرستد -->
+          <input type="hidden" id="likeInput" name="like" value="0">
+        </div>
+
+        <div class="form-actions">
+          <a href="{% url 'home' %}" class="btn btn-secondary">بازگشت به صفحه وبلاگ</a>
+          <button type="submit" class="btn btn-primary">ثبت پست</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</div>
+
+<script src="{% static 'js/index.js' %}"></script>
 </body>
 </html>

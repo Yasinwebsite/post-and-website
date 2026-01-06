@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>وبلاگ خفن | صفحه اصلی</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="page-wrapper">
+  <header class="site-header hero-section">
+    <div class="hero-content">
+      <h1 class="site-title">وبلاگ خفن</h1>
+      <p class="site-subtitle">
+        اینجا یه وبلاگ ساده ولی خفن برای تمرین برنامه‌نویسی، ساختن پروژه‌های وب و نوشتن هرچی تو ذهنته‌ست.
+        هم برای تست کردن جنگو و فرانت استفاده می‌شه، هم می‌تونی باهاش نقش یه وبلاگ واقعی رو بازی کنی.
+      </p>
+      <div class="hero-actions">
+        <a href="{% url 'addpost' %}" class="btn btn-primary">+ ساخت اولین پست خفن</a>
+        <a href="{% url 'posts' %}" class="btn btn-secondary">دیدن همه پست‌ها</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="posts-grid">
+      <article class="post-card glass-card">
+        <div class="post-card-header">
+          <h2 class="post-title">این وبلاگ دقیقا چیه؟</h2>
+        </div>
+        <p class="post-description">
+          این پروژه بیشتر از این‌که یه وبلاگ واقعی باشه، یه زمین بازی برای یاد گرفتن و تمرین کردنه.
+          باهاش می‌تونی کار با فرم‌ها، لایک، استایل خفن، تم دارک و کلی چیز دیگه رو تست کنی.
+        </p>
+      </article>
+
+      <article class="post-card glass-card">
+        <div class="post-card-header">
+          <h2 class="post-title">چیزایی که می‌تونی اینجا بسازی</h2>
+        </div>
+        <p class="post-description">
+          از پست ساده متنی بگیر تا پیاده‌سازی سیستم کامنت، لایک داینامیک، دسته‌بندی پست‌ها
+          و هر چیزی که به ذهنت می‌رسه. اینجا دقیقا جاییه که ایده‌هات رو روی کد پیاده می‌کنی.
+        </p>
+      </article>
+
+      <article class="post-card glass-card">
+        <div class="post-card-header">
+          <h2 class="post-title">هدف اصلی</h2>
+        </div>
+        <p class="post-description">
+          هدف این وبلاگ اینه که یه پروژه‌ی جمع‌وجور ولی حرفه‌ای برای تمرین باشه؛
+          چیزی که هم خوشگل باشه، هم واقعی به نظر برسه، هم بتونی هر وقت خواستی روش فیچر جدید اضافه کنی.
+        </p>
+      </article>
+    </section>
+  </main>
+</div>
+</body>
+</html>
+
+

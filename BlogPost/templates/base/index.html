@@ -3,28 +3,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+    <title>وبلاگ خفن</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-{% for post in posts %}
-<div class="post-card">
-  <h2 class="post-title">{{ post.title }}</h2>
-  <p class="post-description">{{ post.desc }}</p>
-  <button class="like-button">❤️ <span class="like-count">{{ post.likes }}</span></button>
-  <div class="comments">
-    <h3>کامنت‌ها</h3>
-    <div class="comment">
-      <strong>کاربر ۱:</strong> خیلی عالی بود 👌
+<div class="page-wrapper">
+  <header class="site-header hero-section">
+    <div class="hero-content">
+      <h1 class="site-title">وبلاگ خفن</h1>
+      <p class="site-subtitle">اینجا می‌تونی هرچی تو ذهنت می‌گذره بنویسی و با بقیه به اشتراک بذاری 🚀</p>
+      <div class="hero-actions">
+        <a href="{% url 'addpost' %}" class="btn btn-primary">+ نوشتن پست جدید</a>
+        <a href="#posts" class="btn btn-secondary">دیدن آخرین پست‌ها</a>
+      </div>
     </div>
-    <div class="comment">
-      <strong>کاربر ۲:</strong> طراحی خیلی خفن شده 😍
-    </div>
-  </div>
+  </header>
+
+  <main class="content">
+    <section id="posts" class="posts-grid">
+      {% for post in posts %}
+      <article class="post-card glass-card">
+        <div class="post-card-header">
+          <h2 class="post-title">{{ post.title }}</h2>
+        </div>
+        <p class="post-description">{{ post.desc }}</p>
+        <div class="post-footer">
+          <button class="like-button" type="button">
+            ❤️ <span class="like-count">{{ post.likes }}</span>
+          </button>
+          <span class="post-meta">پست شماره {{ forloop.counter }}</span>
+        </div>
+      </article>
+      {% empty %}
+      <p class="empty-state">هنوز پستی ثبت نشده 😅 اولین نفری باش که یه پست خفن می‌نویسی!</p>
+      {% endfor %}
+    </section>
+  </main>
 </div>
-{% endfor %}
-
-
 </body>
 </html>
