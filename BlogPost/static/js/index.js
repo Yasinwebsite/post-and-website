@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const counterDisplay = document.getElementById('counterDisplay');
   const incrementButton = document.getElementById('incrementButton');
-  const likeInput = document.getElementById('likeInput'); // input مخفی برای ارسال به بک‌اند
+  const likeInput = document.getElementById('likeInput');
 
   if (!counterDisplay || !incrementButton || !likeInput) return;
 
@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     count++;
     counterDisplay.textContent = count;
     likeInput.value = count; 
+
   }
 
   incrementButton.addEventListener('click', incrementCounter);
