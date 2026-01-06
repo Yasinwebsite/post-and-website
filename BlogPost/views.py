@@ -6,7 +6,6 @@ from .models import blogPost
 
 
 def home(request):
-    """صفحه اصلی/لندینگ که توضیح می‌دهد وبلاگ درباره چیست."""
     return render(request, "base/home.html")
 
 
