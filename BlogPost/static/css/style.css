@@ -226,12 +226,40 @@ a {
 
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 20px 0;
+}
+
+@media (max-width: 1200px) {
+  .posts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .post-card {
   padding: 18px 16px 16px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.post-card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
 }
 
 .post-card-header {
@@ -291,6 +319,7 @@ a {
   font-size: 0.78rem;
   color: #9ca3af;
 }
+
 
 .empty-state {
   text-align: center;

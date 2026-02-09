@@ -10,5 +10,3 @@ class blogPost(models.Model):
     likes = models.IntegerField(max_length=2)
     Publish = models.DateTimeField(auto_now_add=True)
     Update = models.DateTimeField(auto_now=True)
-    
-    
