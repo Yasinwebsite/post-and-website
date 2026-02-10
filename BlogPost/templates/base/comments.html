@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% comment %} <link rel="stylesheet" href="static{% 'style.css' %}"> {% endcomment %}
+</head>
+<body style="display: flex; justify-content:center; align-items: center; height: 100vh;">
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="nazar" id="" placeholder="موضوع" style="width: 100%; border:2px solid darkblue; border-radius: 9999px; outline: none; padding: 10px;"><br><br>
+        <input type="text" name="tozihat" placeholder="توضیحات" style="width: 105%; border:2px solid darkblue;border-radius: 9999px; outline: none; padding: 5px;">
+        <button type="submit"style="width: 113%; cursor: pointer; border:2px solid darkblue;border-radius: 9999px; outline: none; padding: 10px;">تایید</button>
+    </form>
+</body>
+</html>

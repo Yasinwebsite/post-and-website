@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import blogPost
+from .models import blogPost,comments
 
 
 # Create your views here.
@@ -32,3 +32,18 @@ def index(request):
     }
 
     return render(request, "base/index.html", context)
+
+def comments(request):
+        if request.method == "POST":
+            nazar = request.POST.get("nazar")
+            descripton = request.POST.get("tozihat")
+
+            comments.objects.create(
+                title1=nazar,
+                descripton=descripton,
+            )
+    
+    
+        context = {}
+        return render(request,'base/comments.html',context)
+    
